@@ -94,6 +94,10 @@ public class Request {
 }
 
 open class BaseAPI {
+    public init() {
+        
+    }
+    
     public func get(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
         let request = Request(url: url, method: .GET, parameters: parameters, headers: headers, body: nil)
         let buildRequest = request.request()
