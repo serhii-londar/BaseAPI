@@ -48,9 +48,9 @@ public class Request {
                     guard let value = parameters[key] else {
                         continue
                     }
-                    let escapedValue = "\(key)=\(value)&".addingPercentEncoding(withAllowedCharacters: CharacterSet.BaseAPI_URLQueryAllowedCharacterSet())
+                    let escapedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.BaseAPI_URLQueryAllowedCharacterSet())
                     if let escapedValue = escapedValue {
-                        retUrl.append(escapedValue)
+                        retUrl.append("\(key)=\(escapedValue)&")
                     }
                 }
                 retUrl.removeLast()
