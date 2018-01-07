@@ -45,6 +45,16 @@ open class BaseAPI {
         }
     }
     
+    public func patch(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
+        let request = Request(url: url, method: .PATCH, parameters: parameters, headers: headers, body: body)
+        let buildRequest = request.request()
+        if let urlRequest = buildRequest.0 {
+            let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: completion)
+            task.resume()
+        } else {
+            completion(nil, nil, buildRequest.1)
+        }
+    }
     
     public func put(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
         let request = Request(url: url, method: .PUT, parameters: parameters, headers: headers, body: body)
