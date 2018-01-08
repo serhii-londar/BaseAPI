@@ -1,6 +1,5 @@
 use_frameworks!
+
 target 'BaseAPI_Tests' do
   pod 'BaseAPI', :path => '../'
-  
-  
 end
