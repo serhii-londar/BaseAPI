@@ -26,7 +26,7 @@ The main goal is to simplify sending HTTP request and receiving response.'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'serhii-londar' => 'serhii.londar@gmail.com' }
   s.source           = { :git => 'https://github.com/serhii-londar/BaseAPI.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/serhii-londar'
+  s.social_media_url = 'https://twitter.com/serhii_londar'
   s.ios.deployment_target = '9.0'
   s.source_files = 'BaseAPI/Classes/**/*'
   s.frameworks = 'Foundation'
