@@ -4,9 +4,5 @@
 
 language: swift
 osx_image: xcode9
-xcode_workspace: Example/BaseAPI.xcworkspace
-xcode_scheme: BaseAPI-Example
-before_install:
-  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-  - cd Example
-  - pod install
+xcode_workspace: BaseAPI.xcodeproj
+xcode_scheme: BaseAPI
