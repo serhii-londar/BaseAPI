@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseAPI'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of BaseAPI.'
+  s.version          = '0.1.1'
+  s.summary          = 'BaseAPI is a small Swift library wrapper around URLSession.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,16 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'BaseAPI is a small Swift library which helps you to implement any REST API.
+The main goal is to simplify sending HTTP request and receiving response.'
                        DESC
 
   s.homepage         = 'https://github.com/serhii-londar/BaseAPI'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'serhii-londar' => 'serhii.londar@gmail.com' }
   s.source           = { :git => 'https://github.com/serhii-londar/BaseAPI.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.social_media_url = 'https://twitter.com/serhii-londar'
   s.ios.deployment_target = '9.0'
-
   s.source_files = 'BaseAPI/Classes/**/*'
-
-  # s.resource_bundles = {
-  #   'BaseAPI' => ['BaseAPI/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation'
 end
