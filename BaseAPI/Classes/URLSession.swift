@@ -14,19 +14,15 @@ extension URLSession {
         var data: Data?
         var response: URLResponse?
         var error: Error?
-        
         let semaphore = DispatchSemaphore(value: 0)
-        
-        let dataTask = self.dataTask(with: request) { (rData, rResponse, eError) in
-            data = rData
-            response = rResponse
-            error = eError
+        let dataTask = self.dataTask(with: request) {
+            data = $0
+            response = $1
+            error = $2
             semaphore.signal()
         }
         dataTask.resume()
-        
         _ = semaphore.wait(timeout: .distantFuture)
-        
         return (data, response, error)
     }
     
@@ -34,20 +30,15 @@ extension URLSession {
         var data: Data?
         var response: URLResponse?
         var error: Error?
-        
         let semaphore = DispatchSemaphore(value: 0)
-        
         let dataTask = self.dataTask(with: url) {
             data = $0
             response = $1
             error = $2
-            
             semaphore.signal()
         }
         dataTask.resume()
-        
         _ = semaphore.wait(timeout: .distantFuture)
-        
         return (data, response, error)
     }
 }

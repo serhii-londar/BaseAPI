@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		92A030402003C45300275F6B /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0303F2003C45300275F6B /* URLSession.swift */; };
+		92BA44E820AF864500193F22 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BA44E720AF864500193F22 /* AsyncOperation.swift */; };
+		92EE041920AF86B900C7D303 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BA44E720AF864500193F22 /* AsyncOperation.swift */; };
+		92EE041B20AF8C2C00C7D303 /* BaseAPIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE041A20AF8C2C00C7D303 /* BaseAPIOperation.swift */; };
+		92EE041C20AF8C2D00C7D303 /* BaseAPIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE041A20AF8C2C00C7D303 /* BaseAPIOperation.swift */; };
 		OBJ_24 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_30 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* BaseAPI.swift */; };
 		OBJ_31 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CharacterSet.swift */; };
@@ -19,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		92A0303F2003C45300275F6B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		92BA44E720AF864500193F22 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		92EE041A20AF8C2C00C7D303 /* BaseAPIOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIOperation.swift; sourceTree = "<group>"; };
 		"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		OBJ_11 /* RequestHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderFields.swift; sourceTree = "<group>"; };
@@ -57,7 +63,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -67,7 +73,6 @@
 				OBJ_16 /* Example */,
 				OBJ_17 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -80,6 +85,8 @@
 				OBJ_11 /* RequestHeaderFields.swift */,
 				OBJ_12 /* RequestMethod.swift */,
 				OBJ_13 /* String.swift */,
+				92BA44E720AF864500193F22 /* AsyncOperation.swift */,
+				92EE041A20AF8C2C00C7D303 /* BaseAPIOperation.swift */,
 			);
 			name = Sources;
 			path = BaseAPI/Classes;
@@ -133,7 +140,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				92BA44E820AF864500193F22 /* AsyncOperation.swift in Sources */,
+				92EE041B20AF8C2C00C7D303 /* BaseAPIOperation.swift in Sources */,
 				OBJ_24 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,11 +167,13 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_30 /* BaseAPI.swift in Sources */,
+				92EE041C20AF8C2D00C7D303 /* BaseAPIOperation.swift in Sources */,
 				92A030402003C45300275F6B /* URLSession.swift in Sources */,
 				OBJ_31 /* CharacterSet.swift in Sources */,
 				OBJ_32 /* Request.swift in Sources */,
 				OBJ_33 /* RequestHeaderFields.swift in Sources */,
 				OBJ_34 /* RequestMethod.swift in Sources */,
+				92EE041920AF86B900C7D303 /* AsyncOperation.swift in Sources */,
 				OBJ_35 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
