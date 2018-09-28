@@ -3,6 +3,6 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: swift
-osx_image: xcode9
-xcode_workspace: BaseAPI.xcodeproj
-xcode_scheme: BaseAPI
+osx_image: xcode10
+script:
+  - xcodebuild -project BaseAPI.xcodeproj -scheme BaseAPI -sdk iphonesimulator12.0 clean build | xcpretty
