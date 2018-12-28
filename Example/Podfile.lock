@@ -1,5 +1,5 @@
 PODS:
-  - BaseAPI (0.1.2)
+  - BaseAPI (0.1.3)
 
 DEPENDENCIES:
   - BaseAPI (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseAPI: b511def1286482dbc4dfe6ee331be85f2a3e2733
+  BaseAPI: 04d52cc67477193ad036e95074432744a779fb32
 
 PODFILE CHECKSUM: a053a433a10f2cefed6c08ee6d081849f92e568e
 

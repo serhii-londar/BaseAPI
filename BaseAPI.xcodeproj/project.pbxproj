@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		92A0303F2003C45300275F6B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		OBJ_11 /* RequestHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderFields.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = BaseAPI;
 			};
 			name = Debug;
@@ -234,7 +234,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = BaseAPI;
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseAPI'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'BaseAPI is a small Swift library wrapper around URLSession.'
 
 # This description is used to generate tags and improve search results.
