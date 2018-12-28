@@ -24,6 +24,6 @@ public enum RequestHeaderFields: String {
     case proxyAuthorization = "Proxy-Authorization"
     case range = "Range"
     case referer = "Referer"
-    case tE = "TE"
+    case te = "TE"
     case userAgent = "User-Agent"
 }

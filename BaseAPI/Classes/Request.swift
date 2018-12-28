@@ -44,15 +44,13 @@ public class Request {
         if let parameters = parameters {
             if parameters.count > 0 {
                 retUrl.append("?")
-                for key in parameters.keys {
-                    guard let value = parameters[key] else {
-                        continue
-                    }
-                    let escapedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.BaseAPI_URLQueryAllowedCharacterSet())
-                    if let escapedValue = escapedValue {
-                        retUrl.append("\(key)=\(escapedValue)&")
-                    }
-                }
+				parameters.keys.forEach {
+					guard let value = parameters[$0] else { return }
+					let escapedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.BaseAPI_URLQueryAllowedCharacterSet())
+					if let escapedValue = escapedValue {
+						retUrl.append("\($0)=\(escapedValue)&")
+					}
+				}
                 retUrl.removeLast()
             }
         }
