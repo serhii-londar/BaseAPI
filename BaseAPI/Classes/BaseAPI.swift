@@ -127,8 +127,8 @@ open class BaseAPI {
         }
     }
     
-    public func delete(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, completion: @escaping BaseAPICompletion) {
-        let request = Request(url: url, method: .DELETE, parameters: parameters, headers: headers)
+    public func delete(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data? = nil, completion: @escaping BaseAPICompletion) {
+        let request = Request(url: url, method: .DELETE, parameters: parameters, headers: headers, body: body)
         let buildRequest = request.request()
         if let urlRequest = buildRequest.request {
             let task = session.dataTask(with: urlRequest, completionHandler: completion)
@@ -139,8 +139,8 @@ open class BaseAPI {
     }
     
     
-    public func delete(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil) -> BaseAPIResult {
-        let request = Request(url: url, method: .DELETE, parameters: parameters, headers: headers)
+    public func delete(url: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data? = nil) -> BaseAPIResult {
+        let request = Request(url: url, method: .DELETE, parameters: parameters, headers: headers, body: body)
         let buildRequest = request.request()
         if let urlRequest = buildRequest.request {
             return session.synchronousDataTask(request: urlRequest)
