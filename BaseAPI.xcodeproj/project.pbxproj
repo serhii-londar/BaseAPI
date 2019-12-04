@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		92A030402003C45300275F6B /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0303F2003C45300275F6B /* URLSession.swift */; };
+		E8E2A92723987088004725E5 /* ResponsetHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2A92623987088004725E5 /* ResponsetHeaderFields.swift */; };
 		OBJ_24 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_30 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* BaseAPI.swift */; };
 		OBJ_31 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CharacterSet.swift */; };
 		OBJ_32 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Request.swift */; };
 		OBJ_33 /* RequestHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* RequestHeaderFields.swift */; };
 		OBJ_34 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RequestMethod.swift */; };
-		OBJ_35 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		92A0303F2003C45300275F6B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E2A92623987088004725E5 /* ResponsetHeaderFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsetHeaderFields.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		OBJ_11 /* RequestHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderFields.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
-		OBJ_13 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		OBJ_15 /* BaseAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BaseAPI; sourceTree = SOURCE_ROOT; };
 		OBJ_16 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -45,7 +45,6 @@
 		C82FE88B21D4E53900A9C63E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* String.swift */,
 				OBJ_9 /* CharacterSet.swift */,
 				92A0303F2003C45300275F6B /* URLSession.swift */,
 			);
@@ -86,6 +85,7 @@
 				OBJ_8 /* BaseAPI.swift */,
 				OBJ_10 /* Request.swift */,
 				OBJ_11 /* RequestHeaderFields.swift */,
+				E8E2A92623987088004725E5 /* ResponsetHeaderFields.swift */,
 				OBJ_12 /* RequestMethod.swift */,
 			);
 			name = Sources;
@@ -138,6 +138,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
@@ -166,11 +167,11 @@
 			files = (
 				OBJ_30 /* BaseAPI.swift in Sources */,
 				92A030402003C45300275F6B /* URLSession.swift in Sources */,
+				E8E2A92723987088004725E5 /* ResponsetHeaderFields.swift in Sources */,
 				OBJ_31 /* CharacterSet.swift in Sources */,
 				OBJ_32 /* Request.swift in Sources */,
 				OBJ_33 /* RequestHeaderFields.swift in Sources */,
 				OBJ_34 /* RequestMethod.swift in Sources */,
-				OBJ_35 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
