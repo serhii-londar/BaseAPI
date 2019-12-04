@@ -21,7 +21,7 @@ open class BaseAPI {
         self.session = session
     }
     
-    func send(request: URLRequest, completion: @escaping BaseAPICompletion) {
+    public func send(request: URLRequest, completion: @escaping BaseAPICompletion) {
         session.dataTask(with: request, completionHandler: completion).resume()
     }
     
