@@ -7,6 +7,10 @@
 
 import Foundation
 
+#if swift(>=5.1) && os(Linux)
+   import FoundationNetworking
+#endif
+
 public class Request {
     public var url: String
     public var method: RequestMethod
