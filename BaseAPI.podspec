@@ -30,5 +30,5 @@ The main goal is to simplify sending HTTP request and receiving response.'
   s.ios.deployment_target = '9.0'
   s.source_files = 'BaseAPI/Classes/**/*'
   s.frameworks = 'Foundation'
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 end
