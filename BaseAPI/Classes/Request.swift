@@ -28,7 +28,7 @@ public class Request {
     
     public func request() -> (request: URLRequest?, error: Error?) {
         let stringUrl = self.urlWithParameters()
-        if let encodedUrlString = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: encodedUrlString) {
+        if let encodedUrlString = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encodedUrlString) {
             var request = URLRequest(url: url)
             if let headers = headers {
                 for (key, value) in headers {
