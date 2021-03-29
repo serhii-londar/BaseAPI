@@ -36,8 +36,8 @@ open class BaseAPI {
     
     /// MARK - GET
     
-    public func get(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, callbackQueue: DispatchQueue = .main, completion: @escaping BaseAPICompletion) {
-        let request = Request(url: url, method: .GET, parameters: parameters, headers: headers, body: nil)
+    public func get(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, completion: @escaping BaseAPICompletion) {
+        let request = Request(url: url, method: .GET, parameters: parameters, headers: headers, body: body)
         let buildRequest = request.request()
         if let urlRequest = buildRequest.request {
             let task = session.dataTask(with: urlRequest) { (data, response, error) in
@@ -49,8 +49,8 @@ open class BaseAPI {
         }
     }
     
-    public func get(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil) -> BaseAPIResult {
-        let request = Request(url: url, method: .GET, parameters: parameters, headers: headers, body: nil)
+    public func get(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil) -> BaseAPIResult {
+        let request = Request(url: url, method: .GET, parameters: parameters, headers: headers, body: body)
         let buildRequest = request.request()
         if let urlRequest = buildRequest.request {
             return session.synchronousDataTask(request: urlRequest)
@@ -59,7 +59,7 @@ open class BaseAPI {
         }
     }
     
-    public func ba_get<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
+    public func ba_get<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
         self.get(url: url, parameters: parameters, headers: headers, callbackQueue: self.parsingQueue) { [weak self] (data, response, error) in
             guard let self = self else { return } // Handle error?
             self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
