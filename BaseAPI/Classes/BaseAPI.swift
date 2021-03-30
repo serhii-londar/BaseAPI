@@ -148,7 +148,7 @@ open class BaseAPI {
         }
     }
     
-    public func ba_post<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data?, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
+    public func ba_post<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
         self.post(url: url, parameters: parameters, headers: headers, body: body, callbackQueue: parsingQueue) { [weak self] (data, response, error) in
             guard let self = self else { return } // Handle error?
             self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
@@ -180,7 +180,7 @@ open class BaseAPI {
         }
     }
     
-    public func ba_patch<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data?, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
+    public func ba_patch<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
         self.patch(url: url, parameters: parameters, headers: headers, body: body, callbackQueue: parsingQueue) { [weak self] (data, response, error) in
             guard let self = self else { return } // Handle error?
             self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
@@ -212,7 +212,7 @@ open class BaseAPI {
         }
     }
     
-    public func ba_put<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data?, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
+    public func ba_put<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
         self.patch(url: url, parameters: parameters, headers: headers, body: body, callbackQueue: parsingQueue) { [weak self] (data, response, error) in
             guard let self = self else { return } // Handle error?
             self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
@@ -244,7 +244,7 @@ open class BaseAPI {
         }
     }
     
-    public func ba_delete<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data?, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
+    public func ba_delete<T: Decodable>(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
         self.delete(url: url, parameters: parameters, headers: headers, body: body, callbackQueue: parsingQueue) { [weak self] (data, response, error) in
             guard let self = self else { return } // Handle error?
             self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
