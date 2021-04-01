@@ -66,6 +66,13 @@ open class BaseAPI {
         }
     }
     
+    public func ba_get(url: String, parameters: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil, callbackQueue: DispatchQueue = .main, success: @escaping () -> Void, failure: @escaping (Error) -> Void) {
+        self.get(url: url, parameters: parameters, headers: headers, callbackQueue: self.parsingQueue) { [weak self] (data, response, error) in
+            guard let self = self else { return } // Handle error?
+            self.handle(data: data, response: response, error: error, callbackQueue: callbackQueue, success: success, failure: failure)
+        }
+    }
+    
     /// MARK - private
     
     private func handle<T: Decodable>(data: Data?, response: URLResponse?, error: Error?, callbackQueue: DispatchQueue = .main, success: @escaping (T) -> Void, failure: @escaping (Error) -> Void) {
