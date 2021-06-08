@@ -1,5 +1,9 @@
 use_frameworks!
 
-target 'BaseAPI_Tests' do
+target "BaseAPITest" do
+  pod 'BaseAPI', :path => '../'
+end
+
+target 'BaseAPITests' do
   pod 'BaseAPI', :path => '../'
 end
