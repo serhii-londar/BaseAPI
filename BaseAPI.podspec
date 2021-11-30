@@ -21,6 +21,9 @@ Pod::Spec.new do |s|
 'BaseAPI is a small Swift library which helps you to implement any REST API.
 The main goal is to simplify sending HTTP request and receiving response.'
                        DESC
+                       
+  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target = '9.0'
 
   s.homepage         = 'https://github.com/serhii-londar/BaseAPI'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
