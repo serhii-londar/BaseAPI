@@ -27,34 +27,37 @@ public class Request {
     }
     
     public func request() -> (request: URLRequest?, error: Error?) {
-        let stringUrl = self.urlWithParameters()
-        if let encodedUrlString = stringUrl.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encodedUrlString) {
-            var request = URLRequest(url: url)
-            if let headers = headers {
-                for (key, value) in headers {
-                    request.addValue(value, forHTTPHeaderField: key)
+        // First encode just the base URL
+        if let encodedBaseUrl = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) {
+            // Then add the already-encoded parameters
+            let finalUrl = appendParametersToUrl(encodedBaseUrl)
+            if let url = URL(string: finalUrl) {
+                var request = URLRequest(url: url)
+                if let headers = headers {
+                    for (key, value) in headers {
+                        request.addValue(value, forHTTPHeaderField: key)
+                    }
                 }
+                request.httpMethod = method.rawValue
+                request.httpBody = body
+                return (request, nil)
             }
-            request.httpMethod = method.rawValue
-            request.httpBody = body
-            return (request, nil)
-        } else {
-            return (nil, NSError(domain:"Unable to create URL from string \(stringUrl)", code:9999, userInfo:nil) )
         }
+        return (nil, NSError(domain:"Unable to create URL from string \(url)", code:9999, userInfo:nil))
     }
     
-    func urlWithParameters() -> String {
-        var retUrl = url
+    private func appendParametersToUrl(_ baseUrl: String) -> String {
+        var retUrl = baseUrl
         if let parameters = parameters {
             if parameters.count > 0 {
                 retUrl.append("?")
-				parameters.keys.forEach {
-					guard let value = parameters[$0] else { return }
-					let escapedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.ba_URLQueryAllowedCharacterSet())
-					if let escapedValue = escapedValue {
-						retUrl.append("\($0)=\(escapedValue)&")
-					}
-				}
+                parameters.keys.forEach {
+                    guard let value = parameters[$0] else { return }
+                    let escapedValue = value.addingPercentEncoding(withAllowedCharacters: CharacterSet.ba_URLQueryAllowedCharacterSet())
+                    if let escapedValue = escapedValue {
+                        retUrl.append("\($0)=\(escapedValue)&")
+                    }
+                }
                 retUrl.removeLast()
             }
         }
