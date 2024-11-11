@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
 The main goal is to simplify sending HTTP request and receiving response.'
                        DESC
                        
-  s.tvos.deployment_target = '9.0'
-  s.ios.deployment_target = '9.0'
+  s.tvos.deployment_target = '12.0'
+  s.ios.deployment_target = '12.0'
   s.macos.deployment_target = '10.13'
   s.watchos.deployment_target = '2.0'
 
@@ -36,4 +36,5 @@ The main goal is to simplify sending HTTP request and receiving response.'
   s.source_files = 'BaseAPI/Classes/**/*'
   s.frameworks = 'Foundation'
   s.swift_version = '5'
+  
 end
