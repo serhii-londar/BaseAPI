@@ -6,9 +6,9 @@ let package = Package(
     name: "BaseAPI",
     platforms: [
         .macOS(.v10_13),
-        .iOS(.v9),
-        .watchOS(.v2),
-        .tvOS(.v9)
+        .iOS(.v12),
+        .tvOS(.v12),
+        .watchOS(.v4)
     ],
     products: [
         .library(name: "BaseAPI", targets: ["BaseAPI"])

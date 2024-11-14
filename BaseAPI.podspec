@@ -25,7 +25,7 @@ The main goal is to simplify sending HTTP request and receiving response.'
   s.tvos.deployment_target = '12.0'
   s.ios.deployment_target = '12.0'
   s.macos.deployment_target = '10.13'
-  s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = '4.0'
 
   s.homepage         = 'https://github.com/serhii-londar/BaseAPI'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
